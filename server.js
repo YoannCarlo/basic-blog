@@ -4,16 +4,18 @@ var bodyParser = require('body-parser')
 var cons = require('consolidate');
 
 var app = express();
-var url = process.env.URL || "REPLACEME";
-var dbName = process.env.DBNAME || "REPLACEME";
-var port = process.env.PORT || 8000;
+var url = process.env.URL || "mongodb://localhost:27017/";
+var dbName = process.env.DBNAME || "articlesDb";
+var port = process.env.PORT || 8001;
 
 app.engine('html', cons.pug);
 app.set('view engine', 'html');
-app.set('views',  __dirname +  '/views')
+app.set('views', __dirname + '/views')
+// URL Encoded Body
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use("/assets/css", express.static(__dirname + "/views/assets/css"));
 
 var routes = require("./routes");
-
 
 MongoClient.connect(url, function(err, client) {
   if(err) throw err;
