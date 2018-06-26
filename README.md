@@ -4,12 +4,12 @@
 - nodejs
 - mongodb
 
-#### 1. Créer la base
+#### 1. CrÃ©er la base
 + Lancer mongodb.exe
 + Lancer mongo.exe
 + Dans l'invite de commande ouverte par mongo.exe :
 	+ taper  `use articlesDb`,
-	+ puis insérer les données suivante :
+	+ puis insÃ©rer les donnÃ©es suivante :
 ```
 db.article.insert({'titre': 'titreartcl1', date: new Date("2018-08-07"), 'auteur': 'Louis', 'resume': 'resumeartcl1'})
 db.article.insert({'titre': 'titreartcl2', date: new Date("2018-08-07"), 'auteur': 'Marc', 'resume': 'resumeartcl2'})
@@ -24,9 +24,9 @@ db.article.insert({'titre': 'titreartcl10', date: new Date("2018-08-07"), 'auteu
 db.article.insert({'titre': 'titreartcl11', date: new Date("2018-08-07"), 'auteur': 'Sami', 'resume': 'resumeartcl11'})
 db.article.insert({'titre': 'titreartcl12', date: new Date("2018-08-07"), 'auteur': 'David', 'resume': 'resumeartcl12'})
 ```
-+ Lancer une invite de commande à la racine du projet puis exécuter les lignes suivantes :
++ Lancer une invite de commande Ã  la racine du projet puis exÃ©cuter les lignes suivantes :
 ```
 npm install
 node server.js
 ```
-+ Vous pouvez désormais accéder à l'adresse `http://localhost:8001` sur votre navigateur
++ Vous pouvez dÃ©sormais accÃ©der Ã  l'adresse `http://localhost:8001` sur votre navigateur
